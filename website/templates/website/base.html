@@ -9,11 +9,14 @@
 <body>
     <header>
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-sm-4">
                 <h1>DigitalPapers</h1>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-4">
                 <a href="{% url 'accounts:login' %}"><button>Login</button></a>
+            </div>
+            <div class="col-sm-4">
+                <a href="{% url 'accounts:register' %}"><button>Create Account</button></a>
             </div>
         </div>
     </header>

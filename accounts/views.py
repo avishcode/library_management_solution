@@ -16,6 +16,24 @@ def user_login(request):
         form = AuthenticationForm()
     return render(request, "accounts/login.html", {'form':form})
 
+#user regisration
+def user_register(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            auth_login(request,user)
+            return redirect('accounts:dashboard')
+    else:
+        form = UserCreationForm()
+    return render(request, "accounts/user_registration.html", {'form':form})
+
+
+def user_logout(request):
+    auth_logout(request)
+    return redirect('/')
+
+
 
 
 def dashboard(request):

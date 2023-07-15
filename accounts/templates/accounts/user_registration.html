@@ -6,8 +6,13 @@
     <title>DigitalPapers</title>
 </head>
 <body>
+    <h1>User Registration Page</h1>
+    <h2>Register</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
 
-<h1>Welcome back <span style = color:blue;>{{ user.username }}</span> !!!</h1>
-<a href="{% url 'accounts:logout' %}">Logout</a>
 </body>
 </html>

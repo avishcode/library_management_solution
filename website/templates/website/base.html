@@ -8,7 +8,14 @@
 </head>
 <body>
     <header>
-        <h4>I am header I here to navigate you</h4>
+        <div class="row">
+            <div class="col-sm-6">
+                <h1>DigitalPapers</h1>
+            </div>
+            <div class="col-sm-6">
+                <a href="{% url 'accounts:login' %}"><button>Login</button></a>
+            </div>
+        </div>
     </header>
     <main>
         {% block page_content %}{% endblock page_content %}
